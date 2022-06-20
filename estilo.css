@@ -1,0 +1,61 @@
+body {
+    background-color: #eef9bf;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold ;
+    font-size: 56px;
+    line-height: 66px;
+    line-height: 100%;
+    color: #75B79E;
+    text-align: center;
+    margin-top: 50px;
+}
+.carta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+.carta img {
+    height: 100px;
+    width: 100px;
+}
+.ficha {
+    width: 117px;
+    height: 146px;
+    margin: 20px;
+    position: relative;
+}
+.ficha:active {
+    transform: scale(0.95);
+}
+.ficha:hover {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+.token {
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 1s;
+    cursor: pointer;
+}
+.costas-lado {
+    transform: rotatey(180deg);
+}
+.frente-lado-vira {
+    transform: rotatey(-180deg);
+}
+.costas-lado-vira {
+    transform: rotatey(0);
+}

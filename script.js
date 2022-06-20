@@ -110,6 +110,10 @@ function verificaPar() {
   function finalJogo() {
     let cartaCombinada = document.querySelectorAll('.par');
     if (cartaCombinada.length === Number(quantidadeCartas)) {   /** MENSAGEM DE FINAL DO JOGO*/
-      alert(`Você ganhou em ${jogadas} jogadas!`);
-    }
+    setTimeout(alerta, 1000)
+    } 
+
   }
+  function alerta () {
+    alert (`Você ganhou em ${jogadas} jogadas!`);
+}

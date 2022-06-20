@@ -33,7 +33,7 @@ h1 {
     transform: scale(0.95);
 }
 .ficha:hover {
-    opacity: 0.5;
+    opacity: 0.7;
     transform: scale(0.95);
 }
 .token {
@@ -58,4 +58,11 @@ h1 {
 }
 .costas-lado-vira {
     transform: rotatey(0);
+}
+.par {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.3;
+    transform: scale(0.95);
+    transition-delay: 0.7s;
 }

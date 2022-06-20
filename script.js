@@ -74,46 +74,47 @@ function clicar(element) {
 }
 
 function verificaPar() {
-    let cartaClicada = document.querySelectorAll('.ficha.selecionado');
-    if (cartaClicada.length === 2) {
-      if (cartaClicada[0].innerHTML === cartaClicada[1].innerHTML) {
-        par();
-      } else {
-        setTimeout(naoPar, 1000);
-      }
+  let cartaClicada = document.querySelectorAll('.ficha.selecionado');
+  if (cartaClicada.length === 2) {
+    if (cartaClicada[0].innerHTML === cartaClicada[1].innerHTML) {
+      par();
+    } else {
+      setTimeout(naoPar, 1000);
     }
   }
+}
   
-  function par() {
-    let cartaClicada = document.querySelectorAll('.ficha.selecionado');
-    cartaClicada[0].classList.remove('selecionado');
-    cartaClicada[1].classList.remove('selecionado');
-    cartaClicada[0].classList.add('par');
-    cartaClicada[1].classList.add('par');
-    jogadas = jogadas + 2
-    finalJogo();
-  }
+function par() {
+  let cartaClicada = document.querySelectorAll('.ficha.selecionado');
+  cartaClicada[0].classList.remove('selecionado');
+  cartaClicada[1].classList.remove('selecionado');
+  cartaClicada[0].classList.add('par');
+  cartaClicada[1].classList.add('par');
+  jogadas = jogadas + 2
+  finalJogo();
+}
   
-  function naoPar() {
-    let cartaClicada = document.querySelectorAll('.ficha.selecionado');
-    let viradaFrente = document.querySelectorAll('.selecionado .frente-lado-vira');
-    let viradaCostas = document.querySelectorAll('.selecionado .costas-lado-vira');
-    viradaFrente[0].classList.remove('frente-lado-vira');
-    viradaFrente[1].classList.remove('frente-lado-vira');
-    viradaCostas[0].classList.remove('costas-lado-vira');
-    viradaCostas[1].classList.remove('costas-lado-vira');
-    cartaClicada[0].classList.remove('selecionado');
-    cartaClicada[1].classList.remove('selecionado');
-    jogadas = jogadas + 2
-  }
+function naoPar() {
+  let cartaClicada = document.querySelectorAll('.ficha.selecionado');
+  let viradaFrente = document.querySelectorAll('.selecionado .frente-lado-vira');
+  let viradaCostas = document.querySelectorAll('.selecionado .costas-lado-vira');
+  viradaFrente[0].classList.remove('frente-lado-vira');
+  viradaFrente[1].classList.remove('frente-lado-vira');
+  viradaCostas[0].classList.remove('costas-lado-vira');
+  viradaCostas[1].classList.remove('costas-lado-vira');
+  cartaClicada[0].classList.remove('selecionado');
+  cartaClicada[1].classList.remove('selecionado');
+  jogadas = jogadas + 2
+}
   
-  function finalJogo() {
-    let cartaCombinada = document.querySelectorAll('.par');
-    if (cartaCombinada.length === Number(quantidadeCartas)) {   /** MENSAGEM DE FINAL DO JOGO*/
-    setTimeout(alerta, 1000)
-    } 
+function finalJogo() {
+  let cartaCombinada = document.querySelectorAll('.par');
+  if (cartaCombinada.length === Number(quantidadeCartas)) {   /** MENSAGEM DE FINAL DO JOGO*/
+  setTimeout(alerta, 1000)
+  } 
 
-  }
-  function alerta () {
-    alert (`Você ganhou em ${jogadas} jogadas!`);
+}
+
+function alerta () {
+  alert (`Você ganhou em ${jogadas} jogadas!`);
 }

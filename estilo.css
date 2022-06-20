@@ -32,10 +32,6 @@ h1 {
 .ficha:active {
     transform: scale(0.95);
 }
-.ficha:hover {
-    opacity: 0.7;
-    transform: scale(0.95);
-}
 .token {
     width: 117px;
     height: 146px;
@@ -65,4 +61,18 @@ h1 {
     opacity: 0.3;
     transform: scale(0.95);
     transition-delay: 0.7s;
+}
+@media (max-width: 630px) {
+
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+@media (min-width:1000px) {
+
+    .ficha:hover {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
 }
